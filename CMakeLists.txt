@@ -25,8 +25,30 @@ if (${X_ROS_VERSION} STREQUAL "1")
 
     add_message_files(
         FILES
-        XmsgArmJointParam.msg
-        XmsgArmJointParamList.msg
+        HexRoboArmCtrl.msg
+        HexRoboArmCtrlStamped.msg
+        HexRoboArmState.msg
+        HexRoboArmStateStamped.msg
+        HexRoboChsCtrl.msg
+        HexRoboChsCtrlStamped.msg
+        HexRoboChsState.msg
+        HexRoboChsStateStamped.msg
+        HexRoboGripCtrl.msg
+        HexRoboGripCtrlStamped.msg
+        HexRoboGripState.msg
+        HexRoboGripStateStamped.msg
+        HexRoboLiftCtrl.msg
+        HexRoboLiftCtrlStamped.msg
+        HexRoboLiftState.msg
+        HexRoboLiftStateStamped.msg
+        HexRoboManipCtrl.msg
+        HexRoboManipCtrlStamped.msg
+        HexRoboManipState.msg
+        HexRoboManipStateStamped.msg
+        HexTeleopHandleCtrl.msg
+        HexTeleopHandleCtrlStamped.msg
+        HexTeleopHandleState.msg
+        HexTeleopHandleStateStamped.msg
     )
 
     generate_messages(
@@ -48,9 +70,31 @@ elseif (${X_ROS_VERSION} STREQUAL "2")
     find_package(rosidl_default_generators REQUIRED)
 
     rosidl_generate_interfaces(${PROJECT_NAME}
-        "msg/XmsgArmJointParam.msg"
-        "msg/XmsgArmJointParamList.msg"
-        DEPENDENCIES builtin_interfaces
+        "msg/HexRoboArmCtrl.msg"
+        "msg/HexRoboArmCtrlStamped.msg"
+        "msg/HexRoboArmState.msg"
+        "msg/HexRoboArmStateStamped.msg"
+        "msg/HexRoboChsCtrl.msg"
+        "msg/HexRoboChsCtrlStamped.msg"
+        "msg/HexRoboChsState.msg"
+        "msg/HexRoboChsStateStamped.msg"
+        "msg/HexRoboGripCtrl.msg"
+        "msg/HexRoboGripCtrlStamped.msg"
+        "msg/HexRoboGripState.msg"
+        "msg/HexRoboGripStateStamped.msg"
+        "msg/HexRoboLiftCtrl.msg"
+        "msg/HexRoboLiftCtrlStamped.msg"
+        "msg/HexRoboLiftState.msg"
+        "msg/HexRoboLiftStateStamped.msg"
+        "msg/HexRoboManipCtrl.msg"
+        "msg/HexRoboManipCtrlStamped.msg"
+        "msg/HexRoboManipState.msg"
+        "msg/HexRoboManipStateStamped.msg"
+        "msg/HexTeleopHandleCtrl.msg"
+        "msg/HexTeleopHandleCtrlStamped.msg"
+        "msg/HexTeleopHandleState.msg"
+        "msg/HexTeleopHandleStateStamped.msg"
+        DEPENDENCIES builtin_interfaces sensor_msgs nav_msgs geometry_msgs std_msgs
     )
 
     ament_package()

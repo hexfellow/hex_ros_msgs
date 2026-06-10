@@ -1,0 +1,2 @@
+std_msgs/Header header
+HexRoboGripState grip_state
