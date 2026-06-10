@@ -10,9 +10,9 @@ project(hex_ros_msgs)
 
 set(X_ROS_VERSION $ENV{ROS_VERSION})
 message(STATUS "Your ROS version is ROS${X_ROS_VERSION}")
-add_definitions(-DX_ROS_VERSION=${X_ROS_VERSION}) 
+add_definitions(-DX_ROS_VERSION=${X_ROS_VERSION})
 
-if (${X_ROS_VERSION} STREQUAL "1")
+if(${X_ROS_VERSION} STREQUAL "1")
 
     find_package(catkin REQUIRED COMPONENTS
         message_generation
@@ -20,11 +20,13 @@ if (${X_ROS_VERSION} STREQUAL "1")
         rospy
         std_msgs
         sensor_msgs
+        geometry_msgs
         nav_msgs
     )
 
     add_message_files(
         FILES
+        HexJnt.msg
         HexRoboArmCtrl.msg
         HexRoboArmCtrlStamped.msg
         HexRoboArmState.msg
@@ -59,17 +61,22 @@ if (${X_ROS_VERSION} STREQUAL "1")
     )
 
     catkin_package(
-        CATKIN_DEPENDS roscpp rospy std_msgs sensor_msgs nav_msgs message_runtime
+        CATKIN_DEPENDS roscpp rospy std_msgs sensor_msgs geometry_msgs nav_msgs message_runtime
     )
 
-elseif (${X_ROS_VERSION} STREQUAL "2")
+elseif(${X_ROS_VERSION} STREQUAL "2")
 
     find_package(ament_cmake REQUIRED)
     find_package(rclcpp REQUIRED)
     find_package(builtin_interfaces REQUIRED)
+    find_package(std_msgs REQUIRED)
+    find_package(geometry_msgs REQUIRED)
+    find_package(sensor_msgs REQUIRED)
+    find_package(nav_msgs REQUIRED)
     find_package(rosidl_default_generators REQUIRED)
 
     rosidl_generate_interfaces(${PROJECT_NAME}
+        "msg/HexJnt.msg"
         "msg/HexRoboArmCtrl.msg"
         "msg/HexRoboArmCtrlStamped.msg"
         "msg/HexRoboArmState.msg"
@@ -99,6 +106,6 @@ elseif (${X_ROS_VERSION} STREQUAL "2")
 
     ament_package()
 
-else ()
+else()
     message(FATAL_ERROR "Unknown ROS version, please install the ros_environment package")
-endif ()
+endif()
