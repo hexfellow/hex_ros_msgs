@@ -57,6 +57,7 @@ if(${X_ROS_VERSION} STREQUAL "1")
         DEPENDENCIES
         std_msgs
         sensor_msgs
+        geometry_msgs
         nav_msgs
     )
 
