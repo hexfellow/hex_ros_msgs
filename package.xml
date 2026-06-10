@@ -12,16 +12,19 @@
   <build_depend condition="$ROS_VERSION == 1">rospy</build_depend>
   <build_depend condition="$ROS_VERSION == 1">std_msgs</build_depend>
   <build_depend condition="$ROS_VERSION == 1">sensor_msgs</build_depend>
+  <build_depend condition="$ROS_VERSION == 1">geometry_msgs</build_depend>
   <build_depend condition="$ROS_VERSION == 1">nav_msgs</build_depend>
   <build_export_depend condition="$ROS_VERSION == 1">roscpp</build_export_depend>
   <build_export_depend condition="$ROS_VERSION == 1">rospy</build_export_depend>
   <build_export_depend condition="$ROS_VERSION == 1">std_msgs</build_export_depend>
   <build_export_depend condition="$ROS_VERSION == 1">sensor_msgs</build_export_depend>
+  <build_export_depend condition="$ROS_VERSION == 1">geometry_msgs</build_export_depend>
   <build_export_depend condition="$ROS_VERSION == 1">nav_msgs</build_export_depend>
   <exec_depend condition="$ROS_VERSION == 1">roscpp</exec_depend>
   <exec_depend condition="$ROS_VERSION == 1">rospy</exec_depend>
   <exec_depend condition="$ROS_VERSION == 1">std_msgs</exec_depend>
   <exec_depend condition="$ROS_VERSION == 1">sensor_msgs</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 1">geometry_msgs</exec_depend>
   <exec_depend condition="$ROS_VERSION == 1">nav_msgs</exec_depend>
 
   <build_depend condition="$ROS_VERSION == 1">message_generation</build_depend>
