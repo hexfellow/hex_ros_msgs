@@ -1,7 +1,9 @@
 # HexRoboLiftCtrlMode enum
-uint8 CTRL_MODE_POS=0
-uint8 CTRL_MODE_VEL=1
+uint8 CTRL_MODE_NONE=0
+uint8 CTRL_MODE_POS=1
+uint8 CTRL_MODE_VEL=2
 
+# none: (no control applied)
 # pos: [jnt.pos]
 # vel: [jnt.vel]
 uint8 ctrl_mode
