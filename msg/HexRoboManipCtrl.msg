@@ -1,2 +1,0 @@
-HexRoboArmCtrl arm_ctrl
-HexRoboGripCtrl grip_ctrl

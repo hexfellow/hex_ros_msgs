@@ -1,0 +1,2 @@
+HexRosRoboArmState arm_state
+HexRosRoboGripState grip_state

@@ -1,4 +1,4 @@
-# HexRoboGripCtrlMode enum
+# HexRosRoboGripCtrlMode enum
 uint8 CTRL_MODE_NONE=0
 uint8 CTRL_MODE_MIT=1
 uint8 CTRL_MODE_JNT=2
@@ -10,4 +10,4 @@ uint8 CTRL_MODE_TAU=3
 # tau: [jnt.eff, jnt.lim_vel]
 uint8 ctrl_mode
 
-HexJnt jnt
+HexRosJnt jnt

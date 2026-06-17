@@ -1,4 +1,4 @@
-# HexRoboArmCtrlMode enum
+# HexRosRoboArmCtrlMode enum
 uint8 CTRL_MODE_NONE=0
 uint8 CTRL_MODE_MIT=1
 uint8 CTRL_MODE_JNT=2
@@ -12,5 +12,5 @@ uint8 ctrl_mode
 
 geometry_msgs/Vector3 grav
 
-HexJnt jnt
+HexRosJnt jnt
 geometry_msgs/Pose pose

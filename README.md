@@ -2,9 +2,9 @@
 
 ## What does this package do
 
-This package provides unified Hex message definitions that can be used in **both ROS 1 and ROS 2**. It contains control and state message types for various robotic components, including arm, chassis, gripper, lift, manipulator, and teleop handle.
+This package provides unified HexRos message definitions that can be used in **both ROS 1 and ROS 2**. It contains control and state message types for various robotic components, including arm, chassis, gripper, lift, manipulator, and teleop handle.
 
-The package is a pure message definition package — it does not contain any nodes. Other packages depend on it to communicate control commands and state feedback across the Hex robotic system.
+The package is a pure message definition package — it does not contain any nodes. Other packages depend on it to communicate control commands and state feedback across the HexRos robotic system.
 
 ## Maintainer
 
@@ -34,51 +34,51 @@ Ensure the following software and hardware are installed:
 
 | Message    | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
-| `HexJnt`   | Joint data with position, velocity, effort, stiffness/damping gains, and velocity/acceleration limits. |
+| `HexRosJnt`   | Joint data with position, velocity, effort, stiffness/damping gains, and velocity/acceleration limits. |
 
 #### Control Messages
 
 | Message                       | Sub-fields                     | Description                                                                            |
 | ----------------------------- | ------------------------------ | -------------------------------------------------------------------------------------- |
-| `HexRoboArmCtrl`              | `ctrl_mode`, `grav`, `jnt`, `pose` | Arm control command supporting NONE, MIT, joint-position, and end-effector modes. |
-| `HexRoboChsCtrl`              | `ctrl_mode`, `jnt`, `vel`      | Chassis control command supporting NONE, MIT, and velocity modes.                      |
-| `HexRoboGripCtrl`             | `ctrl_mode`, `jnt`             | Gripper control command supporting NONE, MIT, joint-position, and torque modes.        |
-| `HexRoboLiftCtrl`             | `ctrl_mode`, `jnt`             | Lift control command supporting NONE, position, and velocity modes.                    |
-| `HexRoboManipCtrl`            | `arm_ctrl`, `grip_ctrl`        | Combined manipulator control command (arm + gripper).                                  |
-| `HexTeleopHandleCtrl`         | `led_red`, `led_green`, `led_blue` | Teleop handle LED control command.                                                   |
+| `HexRosRoboArmCtrl`              | `ctrl_mode`, `grav`, `jnt`, `pose` | Arm control command supporting NONE, MIT, joint-position, and end-effector modes. |
+| `HexRosRoboChsCtrl`              | `ctrl_mode`, `jnt`, `vel`      | Chassis control command supporting NONE, MIT, and velocity modes.                      |
+| `HexRosRoboGripCtrl`             | `ctrl_mode`, `jnt`             | Gripper control command supporting NONE, MIT, joint-position, and torque modes.        |
+| `HexRosRoboLiftCtrl`             | `ctrl_mode`, `jnt`             | Lift control command supporting NONE, position, and velocity modes.                    |
+| `HexRosRoboManipCtrl`            | `arm_ctrl`, `grip_ctrl`        | Combined manipulator control command (arm + gripper).                                  |
+| `HexRosTeleopHandleCtrl`         | `led_red`, `led_green`, `led_blue` | Teleop handle LED control command.                                                   |
 
 #### Control Messages (Stamped)
 
 | Message                          | Header + Sub-field            |
 | -------------------------------- | ----------------------------- |
-| `HexRoboArmCtrlStamped`          | `header` + `HexRoboArmCtrl`   |
-| `HexRoboChsCtrlStamped`          | `header` + `HexRoboChsCtrl`   |
-| `HexRoboGripCtrlStamped`         | `header` + `HexRoboGripCtrl`  |
-| `HexRoboLiftCtrlStamped`         | `header` + `HexRoboLiftCtrl`  |
-| `HexRoboManipCtrlStamped`        | `header` + `HexRoboManipCtrl` |
-| `HexTeleopHandleCtrlStamped`     | `header` + `HexTeleopHandleCtrl` |
+| `HexRosRoboArmCtrlStamped`          | `header` + `HexRosRoboArmCtrl`   |
+| `HexRosRoboChsCtrlStamped`          | `header` + `HexRosRoboChsCtrl`   |
+| `HexRosRoboGripCtrlStamped`         | `header` + `HexRosRoboGripCtrl`  |
+| `HexRosRoboLiftCtrlStamped`         | `header` + `HexRosRoboLiftCtrl`  |
+| `HexRosRoboManipCtrlStamped`        | `header` + `HexRosRoboManipCtrl` |
+| `HexRosTeleopHandleCtrlStamped`     | `header` + `HexRosTeleopHandleCtrl` |
 
 #### State Messages
 
 | Message                    | Sub-fields                     | Description                                                  |
 | -------------------------- | ------------------------------ | ------------------------------------------------------------ |
-| `HexRoboArmState`          | `jnt` (JointState), `pose`     | Arm state including joint states and end-effector pose.      |
-| `HexRoboChsState`          | `jnt` (JointState), `odom`     | Chassis state including joint states and odometry.           |
-| `HexRoboGripState`         | `jnt` (JointState)             | Gripper state including joint states.                        |
-| `HexRoboLiftState`         | `jnt` (JointState), `pose`     | Lift state including joint states and pose.                  |
-| `HexRoboManipState`        | `arm_state`, `grip_state`      | Combined manipulator state (arm + gripper).                  |
-| `HexTeleopHandleState`     | `trigger`, `axis_x`, `axis_y`, `btn_w`, `btn_x`, `btn_y`, `btn_z` | Teleop handle state with trigger, axes, and button inputs. |
+| `HexRosRoboArmState`          | `jnt` (JointState), `pose`     | Arm state including joint states and end-effector pose.      |
+| `HexRosRoboChsState`          | `jnt` (JointState), `odom`     | Chassis state including joint states and odometry.           |
+| `HexRosRoboGripState`         | `jnt` (JointState)             | Gripper state including joint states.                        |
+| `HexRosRoboLiftState`         | `jnt` (JointState), `pose`     | Lift state including joint states and pose.                  |
+| `HexRosRoboManipState`        | `arm_state`, `grip_state`      | Combined manipulator state (arm + gripper).                  |
+| `HexRosTeleopHandleState`     | `trigger`, `axis_x`, `axis_y`, `btn_w`, `btn_x`, `btn_y`, `btn_z` | Teleop handle state with trigger, axes, and button inputs. |
 
 #### State Messages (Stamped)
 
 | Message                           | Header + Sub-field             |
 | --------------------------------- | ------------------------------ |
-| `HexRoboArmStateStamped`          | `header` + `HexRoboArmState`   |
-| `HexRoboChsStateStamped`          | `header` + `HexRoboChsState`   |
-| `HexRoboGripStateStamped`         | `header` + `HexRoboGripState`  |
-| `HexRoboLiftStateStamped`         | `header` + `HexRoboLiftState`  |
-| `HexRoboManipStateStamped`        | `header` + `HexRoboManipState` |
-| `HexTeleopHandleStateStamped`     | `header` + `HexTeleopHandleState` |
+| `HexRosRoboArmStateStamped`          | `header` + `HexRosRoboArmState`   |
+| `HexRosRoboChsStateStamped`          | `header` + `HexRosRoboChsState`   |
+| `HexRosRoboGripStateStamped`         | `header` + `HexRosRoboGripState`  |
+| `HexRosRoboLiftStateStamped`         | `header` + `HexRosRoboLiftState`  |
+| `HexRosRoboManipStateStamped`        | `header` + `HexRosRoboManipState` |
+| `HexRosTeleopHandleStateStamped`     | `header` + `HexRosTeleopHandleState` |
 
 ## Getting Started
 
@@ -132,12 +132,12 @@ Follow these steps to set up the project for development and testing on your loc
 Once built and sourced, the message types provided by this package can be used by other ROS packages. For example, in Python:
 
 ```python
-from hex_ros_msgs.msg import HexRoboArmCtrl, HexRoboChsState
+from hex_ros_msgs.msg import HexRosRoboArmCtrl, HexRosRoboChsState
 ```
 
 Or in C++:
 
 ```cpp
-#include <hex_ros_msgs/HexRoboArmCtrl.h>
-#include <hex_ros_msgs/HexRoboChsState.h>
+#include <hex_ros_msgs/HexRosRoboArmCtrl.h>
+#include <hex_ros_msgs/HexRosRoboChsState.h>
 ```

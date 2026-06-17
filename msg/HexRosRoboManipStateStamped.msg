@@ -1,0 +1,2 @@
+std_msgs/Header header
+HexRosRoboManipState manip_state

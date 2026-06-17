@@ -26,31 +26,31 @@ if(${X_ROS_VERSION} STREQUAL "1")
 
     add_message_files(
         FILES
-        HexJnt.msg
-        HexRoboArmCtrl.msg
-        HexRoboArmCtrlStamped.msg
-        HexRoboArmState.msg
-        HexRoboArmStateStamped.msg
-        HexRoboChsCtrl.msg
-        HexRoboChsCtrlStamped.msg
-        HexRoboChsState.msg
-        HexRoboChsStateStamped.msg
-        HexRoboGripCtrl.msg
-        HexRoboGripCtrlStamped.msg
-        HexRoboGripState.msg
-        HexRoboGripStateStamped.msg
-        HexRoboLiftCtrl.msg
-        HexRoboLiftCtrlStamped.msg
-        HexRoboLiftState.msg
-        HexRoboLiftStateStamped.msg
-        HexRoboManipCtrl.msg
-        HexRoboManipCtrlStamped.msg
-        HexRoboManipState.msg
-        HexRoboManipStateStamped.msg
-        HexTeleopHandleCtrl.msg
-        HexTeleopHandleCtrlStamped.msg
-        HexTeleopHandleState.msg
-        HexTeleopHandleStateStamped.msg
+        HexRosJnt.msg
+        HexRosRoboArmCtrl.msg
+        HexRosRoboArmCtrlStamped.msg
+        HexRosRoboArmState.msg
+        HexRosRoboArmStateStamped.msg
+        HexRosRoboChsCtrl.msg
+        HexRosRoboChsCtrlStamped.msg
+        HexRosRoboChsState.msg
+        HexRosRoboChsStateStamped.msg
+        HexRosRoboGripCtrl.msg
+        HexRosRoboGripCtrlStamped.msg
+        HexRosRoboGripState.msg
+        HexRosRoboGripStateStamped.msg
+        HexRosRoboLiftCtrl.msg
+        HexRosRoboLiftCtrlStamped.msg
+        HexRosRoboLiftState.msg
+        HexRosRoboLiftStateStamped.msg
+        HexRosRoboManipCtrl.msg
+        HexRosRoboManipCtrlStamped.msg
+        HexRosRoboManipState.msg
+        HexRosRoboManipStateStamped.msg
+        HexRosTeleopHandleCtrl.msg
+        HexRosTeleopHandleCtrlStamped.msg
+        HexRosTeleopHandleState.msg
+        HexRosTeleopHandleStateStamped.msg
     )
 
     generate_messages(
@@ -77,31 +77,31 @@ elseif(${X_ROS_VERSION} STREQUAL "2")
     find_package(rosidl_default_generators REQUIRED)
 
     rosidl_generate_interfaces(${PROJECT_NAME}
-        "msg/HexJnt.msg"
-        "msg/HexRoboArmCtrl.msg"
-        "msg/HexRoboArmCtrlStamped.msg"
-        "msg/HexRoboArmState.msg"
-        "msg/HexRoboArmStateStamped.msg"
-        "msg/HexRoboChsCtrl.msg"
-        "msg/HexRoboChsCtrlStamped.msg"
-        "msg/HexRoboChsState.msg"
-        "msg/HexRoboChsStateStamped.msg"
-        "msg/HexRoboGripCtrl.msg"
-        "msg/HexRoboGripCtrlStamped.msg"
-        "msg/HexRoboGripState.msg"
-        "msg/HexRoboGripStateStamped.msg"
-        "msg/HexRoboLiftCtrl.msg"
-        "msg/HexRoboLiftCtrlStamped.msg"
-        "msg/HexRoboLiftState.msg"
-        "msg/HexRoboLiftStateStamped.msg"
-        "msg/HexRoboManipCtrl.msg"
-        "msg/HexRoboManipCtrlStamped.msg"
-        "msg/HexRoboManipState.msg"
-        "msg/HexRoboManipStateStamped.msg"
-        "msg/HexTeleopHandleCtrl.msg"
-        "msg/HexTeleopHandleCtrlStamped.msg"
-        "msg/HexTeleopHandleState.msg"
-        "msg/HexTeleopHandleStateStamped.msg"
+        "msg/HexRosJnt.msg"
+        "msg/HexRosRoboArmCtrl.msg"
+        "msg/HexRosRoboArmCtrlStamped.msg"
+        "msg/HexRosRoboArmState.msg"
+        "msg/HexRosRoboArmStateStamped.msg"
+        "msg/HexRosRoboChsCtrl.msg"
+        "msg/HexRosRoboChsCtrlStamped.msg"
+        "msg/HexRosRoboChsState.msg"
+        "msg/HexRosRoboChsStateStamped.msg"
+        "msg/HexRosRoboGripCtrl.msg"
+        "msg/HexRosRoboGripCtrlStamped.msg"
+        "msg/HexRosRoboGripState.msg"
+        "msg/HexRosRoboGripStateStamped.msg"
+        "msg/HexRosRoboLiftCtrl.msg"
+        "msg/HexRosRoboLiftCtrlStamped.msg"
+        "msg/HexRosRoboLiftState.msg"
+        "msg/HexRosRoboLiftStateStamped.msg"
+        "msg/HexRosRoboManipCtrl.msg"
+        "msg/HexRosRoboManipCtrlStamped.msg"
+        "msg/HexRosRoboManipState.msg"
+        "msg/HexRosRoboManipStateStamped.msg"
+        "msg/HexRosTeleopHandleCtrl.msg"
+        "msg/HexRosTeleopHandleCtrlStamped.msg"
+        "msg/HexRosTeleopHandleState.msg"
+        "msg/HexRosTeleopHandleStateStamped.msg"
         DEPENDENCIES builtin_interfaces sensor_msgs nav_msgs geometry_msgs std_msgs
     )
 

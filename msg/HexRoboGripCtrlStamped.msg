@@ -1,2 +1,0 @@
-std_msgs/Header header
-HexRoboGripCtrl grip_ctrl

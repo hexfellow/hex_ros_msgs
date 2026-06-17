@@ -1,4 +1,4 @@
-# HexRoboChsCtrlMode enum
+# HexRosRoboChsCtrlMode enum
 uint8 CTRL_MODE_NONE=0
 uint8 CTRL_MODE_MIT=1
 uint8 CTRL_MODE_VEL=2
@@ -8,6 +8,6 @@ uint8 CTRL_MODE_VEL=2
 # vel: [vel.linear, vel.angular]
 uint8 ctrl_mode
 
-HexJnt jnt
+HexRosJnt jnt
 geometry_msgs/Twist vel
 

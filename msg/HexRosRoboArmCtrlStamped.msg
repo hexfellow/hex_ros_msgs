@@ -1,0 +1,2 @@
+std_msgs/Header header
+HexRosRoboArmCtrl arm_ctrl

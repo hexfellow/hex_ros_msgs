@@ -1,2 +1,0 @@
-std_msgs/Header header
-HexRoboLiftState lift_state
