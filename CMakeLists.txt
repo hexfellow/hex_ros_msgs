@@ -51,6 +51,10 @@ if(${X_ROS_VERSION} STREQUAL "1")
         HexRosTeleopHandleCtrlStamped.msg
         HexRosTeleopHandleState.msg
         HexRosTeleopHandleStateStamped.msg
+        HexRosTeleopJoystickState.msg
+        HexRosTeleopJoystickStateStamped.msg
+        HexRosTeleopKeyboardState.msg
+        HexRosTeleopKeyboardStateStamped.msg
     )
 
     generate_messages(
@@ -102,6 +106,10 @@ elseif(${X_ROS_VERSION} STREQUAL "2")
         "msg/HexRosTeleopHandleCtrlStamped.msg"
         "msg/HexRosTeleopHandleState.msg"
         "msg/HexRosTeleopHandleStateStamped.msg"
+        "msg/HexRosTeleopJoystickState.msg"
+        "msg/HexRosTeleopJoystickStateStamped.msg"
+        "msg/HexRosTeleopKeyboardState.msg"
+        "msg/HexRosTeleopKeyboardStateStamped.msg"
         DEPENDENCIES builtin_interfaces sensor_msgs nav_msgs geometry_msgs std_msgs
     )
 
